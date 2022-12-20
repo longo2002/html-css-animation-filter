@@ -97,13 +97,24 @@
 }
 /* Soluzione es.10 */
 .ex-10-icon:hover{
-    
+    animation: spin 5s linear infinite;
 }
-
+@keyframes spin {0% {transform: rotate(-360deg);}}
 
 .ex-11-icon {
     font-size: 60px;
 }
+/* Soluzione es.11 */
+.ex-11-icon:hover {
+    animation: spin3-4 5s linear;
+}
+@keyframes spin3-4 {
+    0% {transform: rotate(0);}
+    75% {transform: rotate(270deg);}
+    100% {transform: rotate(0);}
+}
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -125,6 +136,25 @@
     width: 60px;
     height: 20px;
 }
+/* Soluzione es.12 */
+.ex-12-button:hover .ex-12-top-white {
+    animation: spintop 5s linear infinite;
+}
+@keyframes spintop {
+    0% {left: 10%;}
+    50% {left: 140px;}
+    100% {left: 10%;}
+}
+.ex-12-button:hover .ex-12-bottom-white {
+    animation:spinbottom 5s linear infinite;
+}
+@keyframes spinbottom {
+    0% {right: 20%;}
+    50% {right: 140px;}
+    100% {right: 20%;}
+}
+
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
